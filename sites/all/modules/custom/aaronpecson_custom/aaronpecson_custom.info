@@ -1,0 +1,4 @@
+name = aaronpecson Custom Code
+description = Custom Code for the aaronpecson site.
+package = aaronpecson
+core = 7.x
