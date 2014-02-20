@@ -98,3 +98,51 @@ function aaronpecson_custom_entityform_type_access($op, $type = NULL, $account =
   }
   return entityform_type_access($op, $type, $account);
 }
+
+
+
+/**
+ * Implements hook_block_info()
+ */
+function aaronpecson_custom_block_info() {
+  // This example comes from node.module.
+  $blocks['work_detail'] = array(
+    'info' => t('Details'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ */
+function aaronpecson_custom_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+    case 'work_detail':
+      $block['subject'] = t('Details');
+      $block['content'] = aaronpecson_custom_work_block();
+      break;
+      
+  }
+  return $block;
+}
+
+
+/*
+ * Callback for custom work block
+ */
+function aaronpecson_custom_work_block() {
+  $output = array(); //create empty array
+
+  $node = menu_get_object(); //get object from menu
+  if (!empty($node->type)) {
+	 $output['work_detail'] = entity_view('node', array($node), 'work_detail'); //entity_view returns renderable array
+	 $output['work_detail']['node'][$node->nid]['links']['#access'] = FALSE; //disable comments
+ 	} 
+ 
+ 	return $output;
+}
+

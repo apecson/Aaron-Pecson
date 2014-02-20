@@ -15,5 +15,11 @@
 
 // Place your code here.
 
+  var viewCont = $('#view-display-id-page_1');
+  viewCont.isotope({
+    // options
+    itemSelector : '.views-row'
+  });
+
 
 })(jQuery, Drupal, this, this.document);

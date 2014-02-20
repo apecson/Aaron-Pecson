@@ -8,10 +8,397 @@
   text-align: left;
 }
 
+body {
+  background: #CCC url('../images/dark_geometric.png') scroll repeat 0 0;
+}
+
+#page {
+  padding-bottom: 100px;
+}
+
+.front h1#page-title {
+  display: none;
+}
+
+
+/* Form Overrides */
+form .form-item .form-textarea, 
+form .form-item .form-text {
+  max-width: 320px;
+  height: 35px;
+  border: none;
+}
+
+form .form-item .form-textarea {
+  height: 70px;
+}
+
+input[type="submit"] {
+  .border-radius(5px);
+  padding: 10px 20px;
+  border: none;
+  background: #4B6D86;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: Raleway, Helvetica, sans-serif;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.region-sidebar-second {
+  
+  .block {
+    padding: 10px 10px 30px 10px;
+    background: #333;
+    
+    ul {
+      margin: 0;
+    }
+    
+  }
+  
+  h2.block-title {
+    font-weight: 200;
+    font-family: Raleway, Arial, sans-serif;
+  }
+  
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+
+/* WYSIWYG Styles */
+.handwriting {
+  font-family: Just Another Hand, Arial, sans-serif;
+}
+
+.underline {
+  border-bottom: 1px solid #333;
+}
+
+
+// Header {
+#header-wrapper {
+/* height: 450px; */
+  background: #FFF url('../images/rainbow.jpg') repeat-x scroll 0 50%;
+
+  header#header {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    
+    #block-views-slideshow-block {
+      margin: 0;
+    }
+    
+    
+    .flex-nav-container {
+      margin: 0;
+      
+       ol.flex-control-nav {
+        position: absolute;
+        bottom: 0;
+        display: none;
+        text-align: right;
+        font-size: 0;
+        line-height: 0;
+      }
+      
+    }
+    
+    .flexslider {
+      margin: 0;
+      border: 0;
+      background: transparent;
+    
+      .slides {
+        position: relative;
+        img {
+/* min-height: 150px; */
+
+        } 
+      }
+    } 
+  }
+}
+
+
+// Navigation 
+#navigation-wrapper {
+  height: 75px;
+  background: #CCC url('../images/dark_geometric.png') scroll repeat 0 0;
+
+  .region-navigation {
+    margin: 0 auto;
+    padding: 25px 0;
+    max-width: 960px;
+    
+    .logo-block {
+      .inline-block();
+      position: absolute;
+      z-index: 999;
+      margin: 0;
+      height: 100px;
+    }
+    
+    #block-menu-block-1 {
+      float: right;
+      margin: 0;
+      text-align: right;
+      
+      ul {
+        margin: 0;
+      
+        li {
+          .inline-block();
+          margin: 0 10px;
+          
+          a {
+            .border-radius(5px);
+            display: block;
+            padding: 5px;
+            color: #FFF;
+                   
+            &:hover,
+            &:active,
+            &.active {
+             color: #0088cc;
+              
+            }  
+          }
+        }
+      }      
+    }
+  }
+}
+
+/* Font Overrides */
+h1#page-title {
+  font-weight: 200;
+  font-family: Raleway, Arial, sans-serif;
+}
+
+// Main 
+#main {
+  margin-top: 75px;
+}
+
+.front #main {
+  margin-top: 40px;
+}
+
+
+/* Work Isotope */
+.view-work {
+  
+  #isotope-options {
+    background: transparent;
+    
+    ul{
+      padding: 0;
+      
+      li{
+        .inline-block();
+        text-align: center;
+        
+        a {
+          display: block;
+          padding: 10px;
+/* width: 50px; */
+      
+          
+          &.selected {
+            border-bottom: 2px solid #FFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+#isotope-container {
+  text-align: center;  
+
+  .isotope-element {
+    margin: 0;
+/* width: 160px; */
+/* height: 160px; */
+    
+    .field.field-name-field-work-image.field-type-image.field-label-hidden {
+/* margin-top: 50px; */
+    }
+
+    .views-field.views-field-title {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: transparent;
+    }
+    
+    .views-field.views-field-title a {
+      display: none;
+    }
+    
+    .views-field.views-field-title:hover {
+      background: #000;
+      opacity: .9;
+    }
+    
+    .views-field.views-field-title:hover a {
+      display: block;
+      padding-top: 20px;
+      height: 130px;
+      font-size: 20px;
+    }
+  }
+}
+
+
+/* Work Node */
+
+.node-type-work {
+
+  #block-views-work-screenshot-block {
+    width: 400px;
+  }
+
+  .flex-nav-container {
+    width: auto;
+  }
+  
+  #node_work_full_group_scroll {
+    padding: 0;
+    border: none;
+    
+    legend {
+      display: none;
+    }
+    
+    .field.field-name-field-screenshots.field-type-image.field-label-hidden {
+      .inline-block();
+      margin-right: 5px;
+      padding: 5px;
+      min-height: 100px;
+      border: 2px solid #FFF;
+      
+    }
+  }
+  
+  .region-sidebar-second {
+    
+    .block {
+      padding: 10px;
+      background: #333;
+      
+      ul {
+        margin: 0;
+      }
+      
+    }
+    
+    h2.block-title {
+      font-weight: 200;
+      font-family: Raleway, Arial, sans-serif;
+    }
+    .field-name-field-services-provided {
+      margin-bottom: 20px;
+    }
+    
+  }
+}
+
+/* Article Type */
+.node-type-article .field.field-name-field-image {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+/* Quote Block */
+#block-views-quotes-block {
+  height: 75px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  text-align: center;
+
+  .views-slideshow-cycle-main-frame-row {
+    width: 960px;
+    
+    .field-name-field-quote {
+      font-weight: 200;
+      font-size: 26px; 
+    }
+  }
+}
+
+/* Homepage Blocks */
+.homepage-block,
+#block-views-blog-block {
+  .inline-block();
+  max-width: 300px;
+  
+  h2.block-title {
+    font-weight: 200;
+    font-family: Raleway, Arial, sans-serif;
+  }
+  
+}
+
+#block-nodeblock-27 {
+/*   max-width: 600px; */
+}
+
+#block-nodeblock-28 {
+  margin: 0 25px;
+}
+
+#block-views-blog-block {
+  margin-left: 40px;
+}
+
+/* Webform */
+.node-webform {
+  
+  .field-name-body {
+    float: right;
+  }
+}
+
+/* Region Bottom */
+.region-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 5px;
+  max-width: 100%;
+  width: 100%;
+  height: 20px;
+  background: #000;
+  .block {
+    
+    p {
+/* font-size: 10px; */
+    }
+    
+  }
+  
+}
+
+
+
+
 // Tablet
 @media (min-width: 768px) and (max-width: 959px) {
 }
 
 // Mobile
 @media (max-width: 767px) {
+
+
+.homepage-block { 
+  margin: 0 25px;
+}
+
 }

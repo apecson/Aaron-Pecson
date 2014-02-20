@@ -69,18 +69,22 @@
  * @see template_process()
  */
 ?>
+<div id="navigation-wrapper">
+<div id="navigation">
+  <?php print render($page['navigation']); ?>
+</div></div><!-- /#navigation -->
 
+<div id="header-wrapper">
+<header id="header" role="banner">
+  <?php print render($page['header']); ?>
+</header></div>
+  
 <div id="page">
 
-  <header id="header" role="banner">
-    <?php print render($page['header']); ?>
-  </header>
 
   <div id="main">
 
-    <div id="navigation">
-      <?php print render($page['navigation']); ?>
-    </div><!-- /#navigation -->
+
 
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>

@@ -4,6 +4,14 @@
   filter:alpha(opacity=(@opacity * 100));
 }
 
+// inline-block
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
 // box sizing
 .box-sizing(@size) {
   -moz-box-sizing: @size;
@@ -15,7 +23,7 @@
 // font size
 .font-size(@size) {
   font-size: @size;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 
 // border radius

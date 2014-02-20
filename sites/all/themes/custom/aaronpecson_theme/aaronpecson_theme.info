@@ -67,6 +67,7 @@ stylesheets[all][] = css/styles.css.less
 ; Optionally add some JavaScripts to your theme.
 
 ;scripts[] = js/jquery.formalize.min.js
+scripts[] = js/jquery.isotope.min.js
 
 
 
@@ -145,3 +146,9 @@ settings[zen_wireframes]           = 0
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: http://drupal.org/node/495654
 ;plugins[panels][layouts] = layouts
+
+fonts[google_fonts_api][] = "Open Sans&subset=cyrillic#300"
+fonts[google_fonts_api][] = "Raleway&subset=latin#200"
+fonts[google_fonts_api][] = "Raleway&subset=latin#300"
+fonts[google_fonts_api][] = "Raleway&subset=latin#500"
+fonts[google_fonts_api][] = "Just Another Hand&subset=latin#regular"
