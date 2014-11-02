@@ -87,6 +87,13 @@ function aaronpecson_custom_form_alter(&$form, &$form_state, $form_id) {
     $form['comment']['comment']['#default_value'] = 0;
     $form['display']['node_submitted']['#default_value'] = FALSE;
   }
+
+  if($form_id == 'webform_client_form_19') {
+    $form['submitted']['full_name']['#attributes']['placeholder'] = t('Full Name');
+    $form['submitted']['email']['#attributes']['placeholder'] = t('Email Address');
+    $form['submitted']['message']['#attributes']['placeholder'] = t('What have you got to say?');
+    $form['actions']['submit']['#value'] = t('Send It Off');
+  }
 }
 
 /*

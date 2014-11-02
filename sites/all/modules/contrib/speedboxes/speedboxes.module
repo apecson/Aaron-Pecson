@@ -3,9 +3,6 @@
    *  Add Speedboxes JavaScript, if applicable
    */
   function speedboxes_init() {
-    if ($_GET['q'] != 'admin/people/permissions') {
-      return;
-    }
     
     drupal_load( 'module', 'user' );
     if( user_access( 'use speedboxes' ) ) {
