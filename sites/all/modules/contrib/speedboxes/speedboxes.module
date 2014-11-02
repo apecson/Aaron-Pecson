@@ -1,0 +1,40 @@
+<?php
+  /**
+   *  Add Speedboxes JavaScript, if applicable
+   */
+  function speedboxes_init() {
+    
+    drupal_load( 'module', 'user' );
+    if( user_access( 'use speedboxes' ) ) {
+      $path = drupal_get_path( 'module', 'speedboxes' );
+      
+      drupal_add_js( $path . '/speedboxes-0.1b.js' );
+      drupal_add_js( '
+        var speedboxes  = {
+          config          : {
+            localization    : {
+              check_all       : "'.t('Check all').'",
+              uncheck_all     : "'.t('Uncheck all').'",
+              reverse         : "'.t('Check reverse').'"
+            }
+          }
+        };
+      ', 'inline' );
+      drupal_add_css( $path . '/speedboxes-0.1b.css' );
+    }
+    
+  }
+  
+  /**
+   *  Add "Use speedboxes" permission
+   */
+  function speedboxes_permission() {
+    
+    return array(
+      'use speedboxes' => array(
+        'title'       => t('Use Speedboxes'), 
+        'description' => t('Allow users to use the "Speedboxes" JavaScript for fast checking/unchecking/selection reverse.'),
+      ),
+    );
+    
+  }

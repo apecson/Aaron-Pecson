@@ -1,0 +1,146 @@
+// opacity
+.opacity(@opacity) {
+  opacity:@opacity;
+  filter:alpha(opacity=(@opacity * 100));
+}
+
+// inline-block
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+// box sizing
+.box-sizing(@size) {
+  -moz-box-sizing: @size;
+  -webkit-box-sizing: @size;
+  -ms-box-sizing: @size;
+  box-sizing: @size;
+}
+
+// font size
+.font-size(@size) {
+  font-size: @size;
+  line-height: 1.5em;
+}
+
+// border radius
+.border-radius(@radius) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  position: relative;
+  z-index: 0;
+  behavior: url('/sites/all/libraries/PIE/PIE.htc');
+}
+.border-radius(@top-left, @top-right, @bottom-left, @bottom-right) {
+  border-radius: @arguments;
+  -webkit-border-radius: @arguments;
+  -moz-border-radius: @arguments;
+  -ms-border-radius: @arguments;
+  -o-border-radius: @arguments;
+  position: relative;
+  z-index: 0;
+  behavior: url('/sites/all/libraries/PIE/PIE.htc');
+}
+
+// box shadow
+.box-shadow(@x, @y, @blur, @color) {
+  box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+  position: relative;
+  z-index: 0;
+  behavior: url('/sites/all/libraries/PIE/PIE.htc');
+}
+
+// outline
+.outline(@style) {
+  -moz-outline-style: @style;
+  outline: @style;
+}
+
+// background
+.background(@color, @image, @repeat, @scroll, @x, @y) {
+  background: @color url(@image) @repeat @scroll @x @y;
+}
+.background-image(@image) {
+  background: transparent url(@image) no-repeat scroll 0 0;
+}
+
+// text shadow
+.text-shadow(@h-shadow, @v-shadow, @blur, @color) {
+  text-shadow: @arguments;
+}
+
+// gradient
+.linear-gradient(@start, @end) {
+  background: @start;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(@start) to(@end));
+  background: -webkit-linear-gradient(@start, @end);
+  background: -moz-linear-gradient(@start, @end);
+  background: -ms-linear-gradient(@start, @end);
+  background: -o-linear-gradient(@start, @end);
+  background: linear-gradient(@start, @end);
+  -pie-background: linear-gradient(@start, @end);
+  position: relative;
+  z-index: 0;
+  behavior: url('/sites/all/libraries/PIE/PIE.htc');
+}
+
+// background clip
+.background-clip(@type) {
+  -webkit-background-clip: @type;
+  -moz-background-clip: @type;
+  background-clip: @type;
+}
+
+// transitions
+.transition(@effect) {
+  -webkit-transition: @effect;
+  -moz-transition: @effect;
+  -ms-transition: @effect;
+  -o-transition: @effect;
+  transition: @effect;
+}
+
+// overrides
+.no-list-style {
+	list-style-type: none;
+	list-style-image: none;
+}
+
+.no-appearance {
+  -ms-appearance: none;
+  -o-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.no-outline {
+  -moz-outline-style: none;
+  outline: none;
+}
+
+.no-border-radius {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.no-box-shadow {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+}

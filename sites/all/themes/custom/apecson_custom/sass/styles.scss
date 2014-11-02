@@ -1,0 +1,193 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+
+body {
+/*   background: #000 url('../images/blackorchid.png') scroll repeat 0 0; */
+  background: #FFF;
+  color: #000;
+  position:relative;
+  z-index:0;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.front {
+  h1#page-title {
+    display: none;
+  }
+}
+
+h1#page-title {
+  font-family: Lora, Verdana;
+  font-weight: 700;
+  font-size: 46px;
+}
+
+h3 {
+  font-family: Lora;
+  font-style: italic;
+  font-size: 28px;
+  margin: .25em 0;
+  margin-bottom: 0;
+}
+
+header {
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  background: #000;
+  top: 0;
+  -webkit-box-shadow: 0px 10px 30px 5px rgba(56,56,56,0.3);
+  -moz-box-shadow: 0px 10px 30px 5px rgba(56,56,56,0.3);
+  box-shadow: 0px 10px 30px 5px rgba(56,56,56,0.3);
+  z-index: 99;
+  .logged-in & {
+    margin-top: 20px;
+  }
+}
+
+#content-full-width {
+  .front & {
+    margin-top: 64px;
+
+  }
+}
+
+#page-wrapper {
+  margin-top: 64px;
+  position: relative;
+  z-index: 50;
+  margin-bottom: 200px;
+  background: #FFF;
+  padding-bottom: 50px;
+}
+
+#block-system-main-menu {
+  ul.menu {
+    margin: 0;
+    li {
+      @include inline-block;
+      list-style-image: none;
+      list-style-type: none;
+      -webkit-transition: all 200ms ease-in;
+      -moz-transition: all 200ms ease-in;
+      -o-transition: all 200ms ease-in;
+      transition: all 200ms ease-in;
+      a {
+        display: block;
+        font-size: 18px;
+        padding: 20px 40px;
+        color: #A3A3A3;;
+        text-decoration: none;
+        font-family: OpenSans;
+        -webkit-transition: all 200ms ease-in;
+        -moz-transition: all 200ms ease-in;
+        -o-transition: all 200ms ease-in;
+        transition: all 200ms ease-in;
+        &.active {
+          color: #E8298A;
+        }
+        @include breakpoint(short) {
+          padding: 10px 20px;
+        }
+      }
+      &:hover {
+        background: transparent;
+        a {
+          color: #F8CE47;
+        }
+      }
+    }
+  }
+}
+
+.section-contact {
+  .node-webform {
+    label {
+      display: none;
+    }
+    input.form-text,
+    textarea.form-textarea {
+      height: 60px;
+      padding: 10px;
+      font-family: Lora;
+      font-style: italic;
+      max-width: 500px;
+      width: 100%;
+      &:focus {
+        outline-color: #EC168F;
+      }
+    }
+    textarea.form-textarea {
+      height: 100px;
+      resize: none;
+      border-color: #BFBFBF;
+    }
+    input.form-submit {
+      -webkit-appearance: none;
+      background: #55C9F1;
+      border: none;
+      color: #FFF;
+      font-family: Lora;
+      font-style: italic;
+      font-weight: 700;
+      padding: 15px;
+      -webkit-font-smoothing: antialiased !important;
+      -webkit-transition: all 200ms ease-in;
+      -moz-transition: all 200ms ease-in;
+      -o-transition: all 200ms ease-in;
+      transition: all 200ms ease-in;
+      &:hover {
+        background: #EB492E;
+      }
+    }
+    .description {
+      font-family: lora;
+      font-style: italic;
+    }
+  }
+}
+
+footer {
+  -webkit-box-shadow: inset 0px 10px 30px 0px rgba(56, 56, 56, 0.29);
+  -moz-box-shadow:    inset 0px 10px 30px 0px rgba(56, 56, 56, 0.29);
+  box-shadow:         inset 0px 10px 30px 0px rgba(56, 56, 56, 0.29);
+  height: 200px;
+  color: #CCC;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  z-index: -2;
+  background:#31353a;
+  width: 100%;
+}
+
+#block-nodeblock-50 {
+/*
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+*/
+}

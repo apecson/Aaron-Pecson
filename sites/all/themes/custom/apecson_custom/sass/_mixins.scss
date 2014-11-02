@@ -1,0 +1,78 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+@mixin breakpoint($point) {
+  @if $point == short {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $point == tall {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == grandeonly {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $point == venti {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $point == trenta {
+    @media only screen and (min-width: 1441px) {
+      @content;
+    }
+  }
+  @else if $point == ie910 {
+    @media screen and (min-width: 0\0) {
+      @content;
+    }
+  }
+}
